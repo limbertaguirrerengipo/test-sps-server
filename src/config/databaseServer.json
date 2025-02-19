@@ -1,8 +1,8 @@
 {
     "conexion": {
-        "username": "sa",
-        "password": "Passw0rd",
-        "host": "10.2.10.15",
+        "username": "admin",
+        "password": "admin",
+        "host": "10.2.1.1",
         "dialect": "mssql",
         "dialectOptions": {
             "options": {

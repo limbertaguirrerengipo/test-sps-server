@@ -54,26 +54,54 @@ PORTUGUÊS
 ------------------------------------------
 script
 -----------------------------------------
-CREATE DATABASE bdprueba;
-
-GO
-USE bdprueba
-
-CREATE TABLE Usuarios (
-    ID INT IDENTITY(1,1) PRIMARY KEY,
-    Nombre VARCHAR(50) NOT NULL,
-    Carnet VARCHAR(20) UNIQUE,
-    ApellidoPaterno VARCHAR(50),
-    ApellidoMaterno VARCHAR(50), 
-    Telefono VARCHAR(20), 
-    Direccion VARCHAR(100),
-    FechaNacimiento DATETIME, 
-);
 
 
-instalado:
+  #### PRUEBA LIMBERT AGUIRRE
 
-npm install sequelize
-npm install tedious
-npm install mysql2
 
+  ## PRUEBA LIMBERT AGUIRRE
+  #### 1- Ejecutar SCRIPT SQL SERVER
+  ```
+
+    CREATE DATABASE bdprueba;
+
+    GO
+    USE bdprueba
+
+    CREATE TABLE Usuarios (
+        ID INT IDENTITY(1,1) PRIMARY KEY,
+        Nombre VARCHAR(50) NOT NULL,
+        Carnet VARCHAR(20) UNIQUE,
+        ApellidoPaterno VARCHAR(50),
+        ApellidoMaterno VARCHAR(50), 
+        Telefono VARCHAR(20), 
+        Direccion VARCHAR(100),
+        FechaNacimiento DATETIME, 
+    );
+
+  ```
+
+   #### 2- Agregar usuario y server de base de datos
+   ```http
+   RUTA /config/databaseServer.json
+    username:
+    password:
+    host: 
+   ```
+
+   ```
+    {
+        "conexion": {
+            "username": "admin",
+            "password": "admin",
+            "host": "10.2.10.11",
+            "dialect": "mssql",
+            "dialectOptions": {
+                "options": {
+                    "requestTimeout": 45000
+                }
+            }
+        }
+    }
+
+   ```
