@@ -50,3 +50,30 @@ PORTUGUÊS
 - Não deve ser possível cadastrar o e-mail já cadastrado
 - Deve ser possível remover usuário
 - Deve ser possível alterar os dados do usuário
+
+------------------------------------------
+script
+-----------------------------------------
+CREATE DATABASE bdprueba;
+
+GO
+USE bdprueba
+
+CREATE TABLE Usuarios (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    Nombre VARCHAR(50) NOT NULL,
+    Carnet VARCHAR(20) UNIQUE,
+    ApellidoPaterno VARCHAR(50),
+    ApellidoMaterno VARCHAR(50), 
+    Telefono VARCHAR(20), 
+    Direccion VARCHAR(100),
+    FechaNacimiento DATETIME, 
+);
+
+
+instalado:
+
+npm install sequelize
+npm install tedious
+npm install mysql2
+

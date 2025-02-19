@@ -1,1 +1,4 @@
 /node_modules
+tmp/*
+*.swp  # Archivos de intercambio de Vim
+.DS_Store  # Archivos de Mac

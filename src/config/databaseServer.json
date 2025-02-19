@@ -1,0 +1,13 @@
+{
+    "conexion": {
+        "username": "sa",
+        "password": "Passw0rd",
+        "host": "10.2.10.15",
+        "dialect": "mssql",
+        "dialectOptions": {
+            "options": {
+                "requestTimeout": 45000
+            }
+        }
+    }
+}
